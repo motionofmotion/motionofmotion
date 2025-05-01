@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motion of motion — 3D Ad Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center border-b border-gray-800 relative">
+    <div class="text-xl font-semibold tracking-wide"> <img src="/res/logo.svg" alt="" style="height: 40px;"> </div>
+  
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex space-x-8 text-sm">
+      <a href="#services" class="hover:text-gray-400">Services</a>
+      <a href="#process" class="hover:text-gray-400">Process</a>
+      <a href="#work" class="hover:text-gray-400">Work</a>
+      <a href="#about" class="hover:text-gray-400">About</a>
+      <a href="#contact" class="hover:text-gray-400">Contact</a>
+    </nav>
+  
+    <!-- Mobile toggle -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black border-t border-gray-800 flex-col space-y-4 text-sm px-6 py-4 hidden md:hidden">
+      <a href="#services" class="block hover:text-gray-400">Services</a>
+      <a href="#process" class="block hover:text-gray-400">Process</a>
+      <a href="#work" class="block hover:text-gray-400">Work</a>
+      <a href="#about" class="block hover:text-gray-400">About</a>
+      <a href="#contact" class="block hover:text-gray-400">Contact</a>
+    </div>
+  
+    <!-- Toggle script -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-28 px-6">
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
+      Premium 3D Ads That Speak for Themselves
+    </h1>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+      We craft sharp, cinematic 3D visuals for brands that don’t blend in.
+    </p>
+    <a href="mailto:contact@motionofmotion.com" class="inline-block bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition">
+      Request a Quote
+    </a>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 px-6 bg-gray-950">
+    <h2 class="text-3xl font-semibold text-center mb-16">What We Do</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-gray-300 text-sm">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-2">Product Showcases</h3>
+        <p>Turn your product into a visual experience people remember.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-2">Explainer Visuals</h3>
+        <p>Break complex ideas into clean, high-impact 3D scenes.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-2">Branded Spots</h3>
+        <p>Create scroll-stopping 3D ads optimized for every platform.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ... header, hero, services sections remain unchanged ... -->
+
+  <!-- Our Process -->
+  <section class="py-24 px-6 bg-black border-t border-gray-800" id="process">
+    <h2 class="text-3xl font-semibold text-center mb-16">Our Process</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-gray-300 text-sm">
+      <div>
+        <div class="text-5xl font-bold text-white mb-4">01</div>
+        <h3 class="text-white text-lg font-semibold mb-2">Discover</h3>
+        <p>We listen, research, and align with your brand vision to define goals clearly.</p>
+      </div>
+      <div>
+        <div class="text-5xl font-bold text-white mb-4">02</div>
+        <h3 class="text-white text-lg font-semibold mb-2">Design</h3>
+        <p>We craft detailed storyboards, scenes, and 3D animations with sharp intent.</p>
+      </div>
+      <div>
+        <div class="text-5xl font-bold text-white mb-4">03</div>
+        <h3 class="text-white text-lg font-semibold mb-2">Deliver</h3>
+        <p>Your ad goes live — cinematic, scroll-stopping, and ready to perform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ... rest of the sections (work, about, contact, footer) stay the same ... -->
+
+  <!-- Work -->
+  <!-- <section id="work" class="py-24 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-16">Selected Work</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <video autoplay muted loop class="rounded-xl shadow-lg">
+        <source src="sample1.mp4" type="video/mp4" />
+      </video>
+      <video autoplay muted loop class="rounded-xl shadow-lg">
+        <source src="sample2.mp4" type="video/mp4" />
+      </video>
+      <video autoplay muted loop class="rounded-xl shadow-lg">
+        <source src="sample3.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section> -->
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-gray-950">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">Less Talk. More Impact.</h2>
+      <p class="text-gray-400 text-lg leading-relaxed">
+        Motion of motion is a design-led studio focused on visual performance. We help bold brands tell better stories through cinematic 3D ads, crafted with precision and intent.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-12">Start a Project</h2>
+    <div class="text-center">
+      <a href="mailto:contact@Motionofmotion.com" class="inline-block bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-12 px-6 border-t border-gray-800 text-sm text-gray-400">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      
+      <!-- Navigation links -->
+      <nav class="flex space-x-6">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#work" class="hover:text-white">Work</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+  
+      <!-- Social links -->
+      <div class="flex space-x-4">
+        <a href="https://twitter.com/motion_0_motion" target="_blank" aria-label="Twitter">
+          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1.6a9.08 9.08 0 01-2.88 1.1A4.52 4.52 0 0016.11 1c-2.5 0-4.5 2.2-4.5 4.91 0 .38.04.75.12 1.1-3.75-.2-7.08-2.05-9.3-4.88A5.1 5.1 0 001.64 5a4.48 4.48 0 002 3.76A4.41 4.41 0 01.96 8v.06c0 2.26 1.52 4.14 3.55 4.57a4.52 4.52 0 01-2.04.08 4.5 4.5 0 004.2 3.2A9.09 9.09 0 010 20.2 12.87 12.87 0 006.29 22c7.55 0 11.68-6.58 11.68-12.29 0-.18 0-.35-.01-.52A8.5 8.5 0 0023 3z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com/motion_of_motion/" target="_blank" aria-label="Instagram">
+          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 4A4.75 4.75 0 1112 17.75 4.75 4.75 0 0112 7.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zm5.38-.88a1.13 1.13 0 11-2.25 0 1.13 1.13 0 012.25 0z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" aria-label="LinkedIn">
+          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.25c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75c.96 0 1.75.78 1.75 1.75s-.79 1.75-1.75 1.75zm13.25 12.25h-3v-5.5c0-1.32-.03-3-1.83-3s-2.12 1.43-2.12 2.9v5.6h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.83-1.56 3.03 0 3.59 2 3.59 4.59v6.47z"/>
+          </svg>
+        </a>
+      </div>
+  
+    </div>
+    <p class="text-center mt-6 text-xs text-gray-600">&copy; 2025 Motion of motion. All rights reserved.</p>
+  </footer>
+  
+</body>
+
+</html>
