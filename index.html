@@ -1,183 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motion of motion</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Motion of motion — 3D Ad Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body class="bg-black text-white font-sans">
-  <!-- Header -->
-  <header class="p-6 flex justify-between items-center border-b border-gray-800 relative">
-    <div class="text-xl font-semibold tracking-wide"> <img src="/res/logo.svg" alt="" style="height: 40px;"> </div>
-  
-    <!-- Desktop nav -->
-    <nav class="hidden md:flex space-x-8 text-sm">
-      <a href="#services" class="hover:text-gray-400">Services</a>
-      <a href="#process" class="hover:text-gray-400">Process</a>
-      <a href="#work" class="hover:text-gray-400">Work</a>
-      <a href="#about" class="hover:text-gray-400">About</a>
-      <a href="#contact" class="hover:text-gray-400">Contact</a>
+  <body class="bg-body-tertiary">
+    <nav
+      class="navbar navbar-expand-lg bg-body-white mx-3 my-3 mx-md-5 p-3 rounded-3 shadow"
+      style="display: flex; align-items: center"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img style="height: 50px" src="/res/1.svg" alt=""
+        /></a>
+        <button class="btn btn-secondary rounded-5 btn-lg" type="submit">
+          Contect us
+        </button>
+      </div>
     </nav>
-  
-    <!-- Mobile toggle -->
-    <button id="menu-btn" class="md:hidden focus:outline-none">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black border-t border-gray-800 flex-col space-y-4 text-sm px-6 py-4 hidden md:hidden">
-      <a href="#services" class="block hover:text-gray-400">Services</a>
-      <a href="#process" class="block hover:text-gray-400">Process</a>
-      <a href="#work" class="block hover:text-gray-400">Work</a>
-      <a href="#about" class="block hover:text-gray-400">About</a>
-      <a href="#contact" class="block hover:text-gray-400">Contact</a>
-    </div>
-  
-    <!-- Toggle script -->
-    <script>
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-  
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    </script>
-  </header>
 
-  <!-- Hero -->
-  <section class="text-center py-28 px-6">
-    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
-      Premium 3D Ads That Speak for Themselves
-    </h1>
-    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-      We craft sharp, cinematic 3D visuals for brands that don’t blend in.
-    </p>
-    <a href="mailto:contact@motionofmotion.com" class="inline-block bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition">
-      Request a Quote
-    </a>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-24 px-6 bg-gray-950">
-    <h2 class="text-3xl font-semibold text-center mb-16">What We Do</h2>
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-gray-300 text-sm">
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-2">Product Showcases</h3>
-        <p>Turn your product into a visual experience people remember.</p>
-      </div>
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-2">Explainer Visuals</h3>
-        <p>Break complex ideas into clean, high-impact 3D scenes.</p>
-      </div>
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-2">Branded Spots</h3>
-        <p>Create scroll-stopping 3D ads optimized for every platform.</p>
-      </div>
-    </div>
-  </section>
-  <!-- ... header, hero, services sections remain unchanged ... -->
-
-  <!-- Our Process -->
-  <section class="py-24 px-6 bg-black border-t border-gray-800" id="process">
-    <h2 class="text-3xl font-semibold text-center mb-16">Our Process</h2>
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-gray-300 text-sm">
-      <div>
-        <div class="text-5xl font-bold text-white mb-4">01</div>
-        <h3 class="text-white text-lg font-semibold mb-2">Discover</h3>
-        <p>We listen, research, and align with your brand vision to define goals clearly.</p>
-      </div>
-      <div>
-        <div class="text-5xl font-bold text-white mb-4">02</div>
-        <h3 class="text-white text-lg font-semibold mb-2">Design</h3>
-        <p>We craft detailed storyboards, scenes, and 3D animations with sharp intent.</p>
-      </div>
-      <div>
-        <div class="text-5xl font-bold text-white mb-4">03</div>
-        <h3 class="text-white text-lg font-semibold mb-2">Deliver</h3>
-        <p>Your ad goes live — cinematic, scroll-stopping, and ready to perform.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ... rest of the sections (work, about, contact, footer) stay the same ... -->
-
-  <!-- Work -->
-  <!-- <section id="work" class="py-24 px-6">
-    <h2 class="text-3xl font-semibold text-center mb-16">Selected Work</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <video autoplay muted loop class="rounded-xl shadow-lg">
-        <source src="sample1.mp4" type="video/mp4" />
+    <div class="mx-3 my-3 mx-md-5">
+      <video id="video">
+        <source src="/res/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-      <video autoplay muted loop class="rounded-xl shadow-lg">
-        <source src="sample2.mp4" type="video/mp4" />
-      </video>
-      <video autoplay muted loop class="rounded-xl shadow-lg">
-        <source src="sample3.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section> -->
 
-  <!-- About -->
-  <section id="about" class="py-24 px-6 bg-gray-950">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6">Less Talk. More Impact.</h2>
-      <p class="text-gray-400 text-lg leading-relaxed">
-        Motion of motion is a design-led studio focused on visual performance. We help bold brands tell better stories through cinematic 3D ads, crafted with precision and intent.
+      <div class="overlayText">
+        <h2 id="topText" class="text-white fw-bold">
+          <span style="color: #6c757d">Design</span> Smarter.
+          <span style="color: #6c757d">Develop</span> Better.
+        </h2>
+        <p class="text-white">
+          Stunning 3D videos that captivate, convert, and communicate.
+        </p>
+        <form class="d-flex gap-3" role="search">
+          <button class="btn btn-secondary rounded-5 btn-lg" type="submit">
+            Get quote
+          </button>
+          <button class="btn btn-outline-light rounded-5 btn-lg" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class=""
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <p style="font-size: 20px; margin: 0%">Scroll to bottom</p>
+      <dotlottie-player
+        src="https://lottie.host/faac2234-9163-4957-913f-5b311487ec45/Sw74gojyQ2.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 35px; height: 35px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+
+    <div class="mx-3 my-3 mx-md-5">
+      <div class="row">
+        <div class="col-12 col-md-6 mt-3">
+          <div class="card border-0 rounded-3 shadow-sm" style="">
+            <img
+              src="/res/car.svg"
+              class="card-img-top shadow-bg mt-5"
+              alt="..."
+            />
+            <div
+              style="position: absolute; top: 100px; width: 100%"
+              class="text-center"
+            >
+              <h2>Industrial design and develop</h2>
+              <p>Product design description</p>
+              <div>
+                <button
+                  class="btn btn-secondary rounded-5 btn-sm"
+                  type="submit"
+                >
+                  Get quote
+                </button>
+                <button
+                  class="btn btn-light border rounded-5 btn-sm"
+                  type="submit"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mt-3">
+          <div class="card border-0 rounded-3 shadow-sm" style="">
+            <img
+              src="/res/girl.svg"
+              class="card-img-top shadow-bg mt-5"
+              alt="..."
+            />
+            <div
+              style="position: absolute; top: 100px; width: 100%"
+              class="text-center"
+            >
+              <h2>Cutting edge</h2>
+              <p>AR (Augmented Reality), VR (Virtual Reality)</p>
+              <div>
+                <button
+                  class="btn btn-secondary rounded-5 btn-sm"
+                  type="submit"
+                >
+                  Pricing
+                </button>
+                <button
+                  class="btn btn-light border rounded-5 btn-sm"
+                  type="submit"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-3">
+          <div class="card border-0 rounded-3 shadow-sm" style="">
+            <img
+              src="/res/untitled.png"
+              class="card-img-top shadow-bg mt-5"
+              alt="..."
+            />
+            <div
+              style="position: absolute; top: 100px; width: 100%"
+              class="text-center"
+            >
+              <h2>Product design and develop</h2>
+              <p>Product design description</p>
+              <div>
+                <button
+                  class="btn btn-secondary rounded-5 btn-sm"
+                  type="submit"
+                >
+                  Get quote
+                </button>
+                <button
+                  class="btn btn-light border rounded-5 btn-sm"
+                  type="submit"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-3">
+          <div class="card border-0 rounded-3 shadow-sm" style="">
+            <img
+              src="/res/untitled.png"
+              class="card-img-top shadow-bg mt-5"
+              alt="..."
+            />
+            <div
+              style="position: absolute; top: 100px; width: 100%"
+              class="text-center"
+            >
+              <h2>Video Production</h2>
+              <p>Product design description</p>
+              <div>
+                <button
+                  class="btn btn-secondary rounded-5 btn-sm"
+                  type="submit"
+                >
+                  Get quote
+                </button>
+                <button
+                  class="btn btn-light border rounded-5 btn-sm"
+                  type="submit"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div></div>
+    </div>
+
+    <div style="height: 100vh" class="mx-3 fw-bold my-3 mx-md-5 shadow-lg p-5">
+      <p style="margin-top: 10vh; margin-bottom: 5vh">
+        { "Why Motion of Motion? }
       </p>
-    </div>
-  </section>
+      <h1 class="quote" style="font-size: 8vmin">
+        Because
+        <span class="bg-warning">motion of motion</span>
 
-  <!-- Contact -->
-  <section id="contact" class="py-24 px-6">
-    <h2 class="text-3xl font-semibold text-center mb-12">Start a Project</h2>
-    <div class="text-center">
-      <a href="mailto:contact@Motionofmotion.com" class="inline-block bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition">
-        Contact Us
-      </a>
+        delivers the most <span style="font-style: italic; color: black"></span
+        ><span style="font-weight: 100">affordable</span>
+        <b style="color: blueviolet">reliable</b>,
+        <!-- <span style="text-decoration: line-through">scam</span> -->
+        <span style="color: green">trustworthy</span>, and
+        <span style="color: #6c757d">scalable</span>
+        solutions—built to perform,
+        <span>built to last.</span>
+        <span style="color: inherit">🥶🥵😍</span>.
+      </h1>
     </div>
-  </section>
 
-  <footer class="py-12 px-6 border-t border-gray-800 text-sm text-gray-400">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-      
-      <!-- Navigation links -->
-      <nav class="flex space-x-6">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#process" class="hover:text-white">Process</a>
-        <a href="#work" class="hover:text-white">Work</a>
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </nav>
-  
-      <!-- Social links -->
-      <div class="flex space-x-4">
-        <a href="https://twitter.com/motion_0_motion" target="_blank" aria-label="Twitter">
-          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1.6a9.08 9.08 0 01-2.88 1.1A4.52 4.52 0 0016.11 1c-2.5 0-4.5 2.2-4.5 4.91 0 .38.04.75.12 1.1-3.75-.2-7.08-2.05-9.3-4.88A5.1 5.1 0 001.64 5a4.48 4.48 0 002 3.76A4.41 4.41 0 01.96 8v.06c0 2.26 1.52 4.14 3.55 4.57a4.52 4.52 0 01-2.04.08 4.5 4.5 0 004.2 3.2A9.09 9.09 0 010 20.2 12.87 12.87 0 006.29 22c7.55 0 11.68-6.58 11.68-12.29 0-.18 0-.35-.01-.52A8.5 8.5 0 0023 3z"/>
-          </svg>
-        </a>
-        <a href="https://instagram.com/motion_of_motion/" target="_blank" aria-label="Instagram">
-          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 4A4.75 4.75 0 1112 17.75 4.75 4.75 0 0112 7.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zm5.38-.88a1.13 1.13 0 11-2.25 0 1.13 1.13 0 012.25 0z"/>
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" aria-label="LinkedIn">
-          <svg class="w-5 h-5 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.25c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75c.96 0 1.75.78 1.75 1.75s-.79 1.75-1.75 1.75zm13.25 12.25h-3v-5.5c0-1.32-.03-3-1.83-3s-2.12 1.43-2.12 2.9v5.6h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.83-1.56 3.03 0 3.59 2 3.59 4.59v6.47z"/>
-          </svg>
-        </a>
+    <div style="height: 100vh" class="mx-3 my-3 mx-md-5 shadow-lg p-5">
+      <div class="text-center">
+        <h1 style="margin-top: 10rem">Join us now join us now</h1>
+        <p>Join us now join us now Join us now join us now</p>
+        <button class="btn btn-secondary rounded-5 btn-lg" type="submit">
+          Contect us
+        </button>
+        <button class="btn btn-light border rounded-5 btn-lg" type="submit">
+          Login
+        </button>
       </div>
-  
+      <div style="margin-top: 10rem">
+        <div class="card" style="width: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Altaf sheikh</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card’s content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="text-center mt-6 text-xs text-gray-600">&copy; 2025 Motion of motion. All rights reserved.</p>
-  </footer>
-  
-</body>
 
+    <div class="accordion mx-3 my-3 mx-md-5" id="accordionExample">
+      <div class="accordion-item border-0 shadow-sm">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            style="height: 100px; box-shadow: none; font-size: 50px"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            is this worth it
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is
+            shown by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Accordion Item #2
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is
+            hidden by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            Accordion Item #3
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is
+            hidden by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content rounded-5 p-0 m-0">
+          <img
+            class=""
+            style="border-top-left-radius: 2em; border-top-right-radius: 2em"
+            src="/res/Slice 1 (3).svg"
+            alt=""
+          />
+
+          <button
+            type="button"
+            style="position: absolute; top: 2rem; right: 2rem"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <div class="container">
+            <div class="m-5">
+              <h3>About product design service (UI/UX)</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                itaque illum, consequuntur minus excepturi similique deleniti
+                voluptates perspiciatis pariatur at? Quod perspiciatis at
+                labore, molestias accusantium nam repellendus soluta sit.
+              </p>
+            </div>
+            <div class="row m-5">
+              <h3>Service</h3>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">UI</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">UX</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">Branding</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">Development</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row m-5">
+              <h3>Our process</h3>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">UI</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">UX</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">Branding</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <div class="card border-1 shadow-sm p-5" style="">
+                  <div class="card-body">
+                    <h5 class="card-title">Development</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 class="m-5" style="font-size: 100px">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            beatae animi sit laboriosam quibusdam labore, odit porro eaque
+            fugiat perferendis molestias ipsa harum a quisquam! Corporis quidem
+            obcaecati totam? Maxime.
+          </h1>
+          <div class="text-center mt-5 mb-5">
+            <h3>Don't wait for anything order now</h3>
+            <button class="btn btn-secondary rounded-5 btn-lg" type="submit">
+              Contect us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+    <script src="/script.js"></script>
+
+
+
+
+ 
+
+
+  </body>
 </html>
