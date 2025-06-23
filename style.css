@@ -7,6 +7,12 @@
 }
 
 
+.cordi{
+  height: 200px !important;
+   box-shadow: none !important;
+    font-size: 100px !important;
+}
+
 
 .overlayText {
   position: absolute;
@@ -19,12 +25,31 @@
   #video {
     width: calc(100vw - 35px);
   }
-}
 
-@media only screen and (max-width: 770px) {
- .overlayText {
+  .service {
+    position: absolute;
+    top: 20px !important;
+    
+  }
+
+  .cordi{
+    font-size: 1rem !important;
+    height: 60px !important;
+  }
+
+  .overlayText {
   position: absolute;
   top: 70%;
+  left: 10%;
+  z-index: 1;
+}
+}
+
+
+@media only screen and (max-height: 800px) {
+ .overlayText {
+  position: absolute;
+  top: 50%;
   left: 10%;
   z-index: 1;
 }
@@ -48,4 +73,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.text-single {
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+
+.text {
+  padding: 0;
+  display: inline-block;
+ 
+}
 

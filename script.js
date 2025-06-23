@@ -1,52 +1,56 @@
-// why us scroll animation
-
 const quotes = document.querySelectorAll(".quote");
 
-      function setupSplits() {
-        quotes.forEach((quote) => {
-          // Reset if needed
-          if (quote.anim) {
-            quote.anim.progress(1).kill();
-            quote.split.revert();
-          }
+function setupSplits() {
+  quotes.forEach((quote) => {
+    // Reset if needed
+    if (quote.anim) {
+      quote.anim.progress(1).kill();
+      quote.split.revert();
+    }
 
-          quote.split = SplitText.create(quote, {
-            type: "words,chars",
-            linesClass: "split-line",
-          });
+    quote.split = SplitText.create(quote, {
+      type: "words,chars",
+      linesClass: "split-line"
+    });
 
-          // Set up the anim
-          quote.anim = gsap.from(quote.split.chars, {
-            scrollTrigger: {
-              trigger: quote,
-              toggleActions: "restart pause resume reverse",
-              start: "center center",
-              markers: { startColor: "#dfdcff", endColor: "transparent" },
-            },
-            duration: 0.5,
-            ease: "circ.out",
-            y: 80,
-            stagger: 0.02,
-          });
-        });
-      }
+    // Set up the anim
+    quote.anim = gsap.from(quote.split.chars, {
+      scrollTrigger: {
+        trigger: quote,
+        toggleActions: "restart pause resume reverse",
+        start: "center center",
+        markers: false
+      },
+      duration: 0.6,
+      ease: "circ.out",
+      y: 80,
+      stagger: 0.02
+    });
+  });
+}
 
-      ScrollTrigger.addEventListener("refresh", setupSplits);
-      setupSplits();
-
-
+ScrollTrigger.addEventListener("refresh", setupSplits);
+setupSplits();
 
 
 
-// testinomal scroll animation
 
-      let loops = gsap.utils.toArray('.text-single').map((line, i) => {
+
+
+
+
+
+
+
+
+//scrable text
+let loops = gsap.utils.toArray('.text-single').map((line, i) => {
     const links = line.querySelectorAll(".js-text"),
     tl = horizontalLoop(links, {
               repeat: -1, 
               speed: 1 + i * 0.5,
         draggable: true,
-              reversed: true,
+              reversed: false,
               paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px"))
           });
   links.forEach(link => {
@@ -54,6 +58,13 @@ const quotes = document.querySelectorAll(".quote");
     link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: i ? -1 : 1, overwrite: true}));
   });
 });
+
+
+
+
+
+
+
 
 let currentScroll = 0;
 let scrollDirection = 1;
@@ -174,3 +185,33 @@ function horizontalLoop(items, config) {
   
 	return tl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
