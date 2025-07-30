@@ -1,122 +1,92 @@
-#video{
-  width: calc(100vw - 110px);
-  height: calc(100vh - 200px);
-  object-fit:fill;
-  border-radius: .5rem;
- 
-}
-
-
-.cordi{
-  height: 200px !important;
-   box-shadow: none !important;
-    font-size: 100px !important;
-}
-
-
-.overlayText {
-  position: absolute;
-  top: 70%;
-  left: 15%;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 770px) {
-  #video {
-    width: calc(100vw - 35px);
-  }
-
-  .service {
-    position: absolute;
-    top: 20px !important;
+a:hover{
+    background-color: white;
+    color: black !important;
+    font-family: "Roboto", sans-serif;
     
+    
+
+}
+
+a{
+    font-family: "Roboto Condensed", sans-serif !important;
+    font-weight: 400 !important;
+}
+
+h1{
+    font-family: "Roboto", sans-serif;
+   font-weight: 500 !important;
+}
+
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+
+p{
+    font-size: 20px;
+}
+
+.modal {
+    display: none;
+}
+
+
+.nav-tabs{
+    border: none !important;
+}
+
+.btn-nav {
+    color: rgb(128, 128, 128) !important;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.btn-nav.active {
+    color: white !important;
+    background-color: black !important;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-nav:hover{
+     background-color: white !important;
+    color: black !important;
+    
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    body{
+        margin: 5px !important;
+    }
+    p{
+        font-size: 16px !important;
+    }
+    #nav_list_1 {
+    display: none !important;
   }
 
-  .cordi{
-    font-size: 1rem !important;
-    height: 60px !important;
-  }
 
-  .overlayText {
-  position: absolute;
-  top: 70%;
-  left: 10%;
-  z-index: 1;
-}
-}
+  
+  
 
-
-@media only screen and (max-height: 800px) {
- .overlayText {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  z-index: 1;
-}
-}
-
-
-.accordion-button:not(.collapsed){
-  background-color: #6c757d !important;
-  color: white !important;
+  
 }
 
 
 
+.carousel-control-next, .carousel-control-prev{
+    position: relative !important;
+    display: inline !important;
+    background-color: rgb(46, 46, 46) !important;
+    border-radius: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 50px !important;
+    left: 50px !important;
+    margin-bottom: 10px !important;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.text-marquee {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
 }
-
-.text-single {
-  position: relative;
-  white-space: nowrap;
-  padding: 0;
-  margin: 0;
-  will-change: transform;
-}
-
-.text {
-  padding: 0;
-  display: inline-block;
- 
-}
-
